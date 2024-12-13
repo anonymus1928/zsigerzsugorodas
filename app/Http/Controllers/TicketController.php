@@ -42,7 +42,7 @@ class TicketController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required|string|min:5|max:20',
+            'title' => 'required|string|max:20',
             'priority' => 'required|integer|min:0|max:3',
             'text' => 'required|string|max:1000',
             'file' => 'nullable|file',
